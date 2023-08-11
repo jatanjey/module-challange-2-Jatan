@@ -1,0 +1,66 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Jatan Jeyachandren</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="./assets/images/jatan.jpg" alt="Jatan Jeyachandren">
+        <p>     Im Jatan Jeyachandren, I live in North York and I am in university of toronto 
+                school of continued studies for coding, and I am in this course because id like
+                to find a coding job. </p>
+    </section>
+
+    <section id="work">
+        <h2>My Work</h2>
+        <div class="work-item">
+            <img src="./assets/images/R.P.S-Game.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+        </div>
+        <!-- as I do more projects more will go here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: jatanjey@gmail.com</p>
+        <p>Phone: (416) 317-8759</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 [Jatan Jeyachandren]</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', scrollToSection);
+        });
+
+        function scrollToSection(event) {
+            event.preventDefault();
+            const targetId = event.target.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
